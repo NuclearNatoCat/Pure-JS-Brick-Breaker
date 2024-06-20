@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+-Pure JavaScript Brick Breaker-
+
+-Info-
+I made this using only 2 files; this HTML file and 1 JavaScript file.
+I made this to learn the Canvas API and/or making decent web games in general.
+This game uses the Canvas API to show everything, even including custom-made checkboxes and buttons.
+The only HTML in this file is the <meta> stuff, the favicon, the basic styling, the script, and the 2 canvases the game uses.
+You can access this game's src at https://nuclear-nc.x10.mx/pure-js-brick-breaker/script.js.
+I do have the <noscript> and the text inside the <canvas>, but those basically just tell you you need JS and Canvas to play.
+
+-Credits-
+Game by NuclearNatoCat, https://nuclear-nc.x10.mx
+Game idea from MDN's tutorial, https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
+Favicon made using https://favicon.io's generator
+-->
+<html>
+    <head>
+        <!--devtools://devtools/bundled/inspector.html best IDE 🐋-->
+        <title>Pure JS Brick Breaker</title>
+        <!--meta the company sucks-->
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Pure JS Brick Breaker is a simple brick breaker made in vanilla JS using the HTML Canvas API."/>
+        <meta name="author" content="NuclearNatoCat"/>
+        <meta property="og:description" content="Pure JS Brick Breaker is a simple brick breaker made in vanilla JS using the HTML Canvas API."/>
+        <meta property="og:image" content="favicon.ico"/>
+        <meta property="og:title" content="Pure JS Brick Breaker"/>
+        <!--favicon-->
+        <link rel="icon" href="favicon.ico">
+        <!--script-->
+        <script src="script.js" defer></script>
+        <!--styling(not in a style.css because this game is all in the canvas; this just makes it look nicer)-->
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            canvas {
+                margin: 5px;
+                background: rgb(240 248 255);
+                border: 5px solid rgb(150 150 255);
+                touch-action: none;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas height="500" width="800">This game uses an HTML Canvas to work. If you're reading this, your browser doesn't support canvases.</canvas>
+        <noscript>This game, as it's name Plain JS Brick Breaker suggests, uses JavaScript to work.</noscript>
+
+        <!--Draws background on another canvas and repeats it for main game bg-->
+        <canvas id="background-canvas" height="50" width="50" hidden></canvas>
+    </body>
+</html>
